@@ -17,8 +17,8 @@
 
 ## License
 
-Licensed under either of [MIT license](https://opensource.org/licenses/MIT)([MIT][mit-url]),
-or [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0)([Apache 2.0][apache-url])
+Licensed under either of [MIT license](https://opensource.org/licenses/MIT) ([MIT][mit-url]),
+or [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0) ([Apache 2.0][apache-url])
 at your option.
 
 ## Contribution
