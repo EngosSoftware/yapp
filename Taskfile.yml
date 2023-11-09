@@ -34,6 +34,11 @@ tasks:
     cmds:
       - cmd: cargo +nightly fmt
 
+  install:
+    desc: Installs preprocessor locally
+    cmds:
+      - cmd: cargo +stable install mdbook-yapp --path . --force
+
   release:
     desc: Builds in release mode
     cmds:
@@ -43,3 +48,8 @@ tasks:
     desc: Tests in debug mode
     cmds:
       - cmd: cargo +stable test
+
+  uninstall:
+    desc: Uninstalls preprocessor
+    cmds:
+      - cmd: cargo uninstall mdbook-yapp
