@@ -7,10 +7,10 @@ use std::fs;
 const FILE_NAME_PREFIX: &str = "yapp";
 
 ///
-const ERR_LOAD: &str = "Yapp error: loading configuration file failed with reason:";
+const ERR_LOAD: &str = "[ERROR][Yapp] loading configuration file failed with reason:";
 
 ///
-const ERR_NOT_FOUND: &str = "Yapp error: configuration file not found, expected name prefix:";
+const ERR_NOT_FOUND: &str = "[WARNING][Yapp] configuration file not found, in current directory expected a file with the name starting with prefix:";
 
 ///
 pub fn load_config_from_file() -> Option<Replacements> {
@@ -20,7 +20,7 @@ pub fn load_config_from_file() -> Option<Replacements> {
         match path {
           Ok(entry) => match entry.file_type() {
             Ok(file_type) => {
-              if file_type.is_file() && entry.file_name().to_string_lossy().starts_with(FILE_NAME_PREFIX) {
+              if file_type.is_file() && entry.file_name().to_string_lossy().to_lowercase().starts_with(FILE_NAME_PREFIX) {
                 return match fs::read_to_string(entry.file_name()) {
                   Ok(content) => load_config(&content),
                   Err(reason) => {

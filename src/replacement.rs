@@ -18,6 +18,7 @@ impl Replacement {
   }
 }
 
+#[derive(Default)]
 pub struct Replacements(Vec<Replacement>);
 
 impl Replacements {

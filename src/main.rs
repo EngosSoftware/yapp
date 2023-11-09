@@ -25,7 +25,9 @@ impl Yapp {
     if let Some(replacements) = load_config_from_file() {
       Self { replacements }
     } else {
-      process::exit(1);
+      Self {
+        replacements: Replacements::default(),
+      }
     }
   }
 }
