@@ -24,30 +24,30 @@ pub fn load_config_from_file() -> Option<Replacements> {
                 return match fs::read_to_string(entry.file_name()) {
                   Ok(content) => load_config(&content),
                   Err(reason) => {
-                    eprintln!("{ERR_LOAD} {}", reason);
+                    eprintln!("{ERROR_LOAD} {}", reason);
                     None
                   }
                 };
               }
             }
             Err(reason) => {
-              eprintln!("{ERR_LOAD} {}", reason);
+              eprintln!("{ERROR_LOAD} {}", reason);
               return None;
             }
           },
           Err(reason) => {
-            eprintln!("{ERR_LOAD} {}", reason);
+            eprintln!("{ERROR_LOAD} {}", reason);
             return None;
           }
         }
       }
     }
     Err(reason) => {
-      eprintln!("{ERR_LOAD} {}", reason);
+      eprintln!("{ERROR_LOAD} {}", reason);
       return None;
     }
   }
-  eprintln!("{ERR_NOT_FOUND} {FILE_NAME_PREFIX}");
+  eprintln!("{WARNING_NOT_FOUND} {FILE_NAME_PREFIX}");
   None
 }
 
