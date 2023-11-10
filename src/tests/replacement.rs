@@ -1,4 +1,4 @@
-//!
+//! # Unit tests for replacement functionality
 
 use crate::replacement::Replacement;
 

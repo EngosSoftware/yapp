@@ -19,15 +19,25 @@ tasks:
     cmds:
       - cmd: cargo +nightly clippy --all-targets
 
+  doc:
+    desc: Generates documentation
+    cmds:
+      - cmd: cargo doc --no-deps
+
   doc-open:
     desc: Generates documentation and opens in browser
     cmds:
       - cmd: cargo doc --no-deps --open
 
-  doc:
+  doc-priv:
     desc: Generates documentation
     cmds:
-      - cmd: cargo doc --no-deps
+      - cmd: cargo doc --no-deps --document-private-items
+
+  doc-priv-open:
+    desc: Generates documentation and opens in browser
+    cmds:
+      - cmd: cargo doc --no-deps --document-private-items --open
 
   fmt:
     desc: Runs code formatter

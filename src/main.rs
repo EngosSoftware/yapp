@@ -1,4 +1,6 @@
+//! # Yapp - Yet another preprocessor for `mdBook`
 //!
+//! This preprocessor simply replaces text in all chapters.
 
 use crate::config::load_config_from_file;
 use crate::replacement::Replacements;
@@ -14,13 +16,13 @@ mod config;
 mod replacement;
 mod tests;
 
-/// A `mdbook` preprocessor for simple replacement patterns.
+/// A preprocessor for simple text replacements.
 struct Yapp {
   replacements: Replacements,
 }
 
 impl Yapp {
-  ///
+  /// Creates a preprocessor.
   pub fn new() -> Self {
     if let Some(replacements) = load_config_from_file() {
       Self { replacements }
@@ -33,12 +35,12 @@ impl Yapp {
 }
 
 impl Preprocessor for Yapp {
-  ///
+  /// Returns the name of the preprocessor.
   fn name(&self) -> &str {
     "yapp-preprocessor"
   }
 
-  ///
+  /// Runs preprocessing, replaces text in all chapters.
   fn run(&self, _ctx: &PreprocessorContext, mut book: Book) -> Result<Book, Error> {
     book.for_each_mut(|book_item| {
       if let BookItem::Chapter(chapter) = book_item {
@@ -48,13 +50,13 @@ impl Preprocessor for Yapp {
     Ok(book)
   }
 
-  ///
+  /// Checks for supported renderers.
   fn supports_renderer(&self, renderer: &str) -> bool {
     renderer != "not-supported"
   }
 }
 
-///
+/// Returns application commands.
 fn make_app() -> Command {
   Command::new("yapp-preprocessor").about("A mdbook preprocessor for simple replacement patterns").subcommand(
     Command::new("supports")
@@ -63,7 +65,7 @@ fn make_app() -> Command {
   )
 }
 
-///
+/// Handles preprocessing command.
 fn handle_preprocessing(pre: &dyn Preprocessor) -> Result<(), Error> {
   let (ctx, book) = CmdPreprocessor::parse_input(io::stdin())?;
   let book_version = Version::parse(&ctx.mdbook_version)?;
@@ -81,7 +83,7 @@ fn handle_preprocessing(pre: &dyn Preprocessor) -> Result<(), Error> {
   Ok(())
 }
 
-///
+/// Handles `supports` command.
 fn handle_supports(pre: &dyn Preprocessor, sub_args: &ArgMatches) -> ! {
   let renderer = sub_args.get_one::<String>("renderer").expect("Required argument");
   let supported = pre.supports_renderer(renderer);
@@ -92,7 +94,7 @@ fn handle_supports(pre: &dyn Preprocessor, sub_args: &ArgMatches) -> ! {
   }
 }
 
-///
+/// Main entrypoint.
 fn main() {
   let matches = make_app().get_matches();
   let preprocessor = Yapp::new();

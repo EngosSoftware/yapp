@@ -1,4 +1,4 @@
-//!
+//! # Unit tests for configuration
 
 use crate::config::load_config;
 

@@ -1,18 +1,18 @@
-//!
+//! # Configuration loader
 
 use crate::replacement::{Replacement, Replacements};
 use std::fs;
 
-///
+/// Configuration file prefix.
 const FILE_NAME_PREFIX: &str = "yapp";
 
-///
-const ERR_LOAD: &str = "[ERROR][Yapp] loading configuration file failed with reason:";
+/// Configuration loading error message.
+const ERROR_LOAD: &str = "[ERROR][Yapp] loading configuration file failed with reason:";
 
-///
-const ERR_NOT_FOUND: &str = "[WARNING][Yapp] configuration file not found, in current directory expected a file with the name starting with prefix:";
+/// Configuration file not found warning message.
+const WARNING_NOT_FOUND: &str = "[WARNING][Yapp] configuration file not found, in current directory expected a file with the name starting with prefix:";
 
-///
+/// Loads configuration from file.
 pub fn load_config_from_file() -> Option<Replacements> {
   match fs::read_dir("./") {
     Ok(paths) => {
@@ -51,7 +51,7 @@ pub fn load_config_from_file() -> Option<Replacements> {
   None
 }
 
-///
+/// Loads configuration from provided text.
 pub fn load_config(content: &str) -> Option<Replacements> {
   let mut replacements = vec![];
   let lines: Vec<String> = content.lines().map(|s| s.trim().to_string()).filter(|s| !s.is_empty()).collect();
