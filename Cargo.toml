@@ -1,6 +1,6 @@
 [package]
 name = "mdbook-yapp"
-version = "0.0.3"
+version = "0.1.0"
 authors = ["Dariusz Depta <wisbery@users.noreply.github.com>"]
 description = "A mdbook preprocessor for simple text replacements"
 documentation = "https://docs.rs/mdbook-yapp"
