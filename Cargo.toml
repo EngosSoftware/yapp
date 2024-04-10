@@ -1,17 +1,17 @@
 [package]
 name = "mdbook-yapp"
-version = "0.1.0"
-authors = ["Dariusz Depta <wisbery@users.noreply.github.com>"]
-description = "A mdbook preprocessor for simple text replacements"
+version = "1.0.0"
+authors = ["Dariusz Depta <dariusz.depta@engos.software>"]
+description = "A mdBook preprocessor for simple text replacements"
 documentation = "https://docs.rs/mdbook-yapp"
-repository = "https://github.com/wisbery/yapp.git"
+repository = "https://github.com/EngosSoftware/yapp"
 keywords = ["mdbook", "preprocessor", "replace", "text", "pattern"]
 categories = ["template-engine", "text-processing"]
 license = "MIT OR Apache-2.0"
 edition = "2021"
 
 [dependencies]
-clap = "4.5.3"
+clap = "4.5.4"
 mdbook = "0.4.37"
 semver = "1.0.22"
-serde_json = "1.0.114"
+serde_json = "1.0.115"
