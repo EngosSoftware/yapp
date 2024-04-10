@@ -1,8 +1,13 @@
 # Yet another preprocessor for mdBook
 
+[![Crates.io][crates-badge]][crates-url]
 [![MIT licensed][mit-badge]][mit-license-url]
 [![Apache 2.0 licensed][apache-badge]][apache-license-url]
 [![Contributor Covenant][cc-badge]][cc-url]
+
+[crates-badge]: https://img.shields.io/crates/v/mdbook-yapp.svg
+
+[crates-url]: https://crates.io/crates/mdbook-yapp
 
 [mit-badge]: https://img.shields.io/badge/License-MIT-blue.svg
 
