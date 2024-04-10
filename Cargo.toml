@@ -1,10 +1,10 @@
 [package]
 name = "mdbook-yapp"
-version = "1.0.0"
+version = "1.0.1"
 authors = ["Dariusz Depta <dariusz.depta@engos.software>"]
 description = "A mdBook preprocessor for simple text replacements"
 documentation = "https://docs.rs/mdbook-yapp"
-repository = "https://github.com/EngosSoftware/yapp"
+repository = "https://github.com/EngosSoftware/yapp.git"
 keywords = ["mdbook", "preprocessor", "replace", "text", "pattern"]
 categories = ["template-engine", "text-processing"]
 license = "MIT OR Apache-2.0"
