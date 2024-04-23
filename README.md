@@ -113,7 +113,8 @@ ABBA
 ```
 
 Every letter `a` in all chapters will be replaced with `ABBA`.
-Note that each line in configuration file is trimmed before used. So configuration file with the content like:
+
+Note that each line in configuration file is trimmed before used. So configuration file with the content like this:
 
 ```text
 a
@@ -130,6 +131,22 @@ a
 ```
 
 will have the same effect as the file in the previous example.
+
+To preserve whitespaces in search pattern or replacement, enclose it in a single quotation mark:
+
+```text
+' a '
+' b c '
+```
+
+or double quotation mark:
+
+```text
+" a "
+" b c "
+```
+
+so the result of replacement for input `│ a │` will be `│ b c │`.
 
 ## License
 
