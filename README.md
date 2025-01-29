@@ -17,10 +17,11 @@
 [cc-badge]: https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg
 [cc-url]: https://github.com/EngosSoftware/yapp/blob/main/CODE_OF_CONDUCT.md
 [repository-url]: https://github.com/EngosSoftware/yapp
+[mdBook]: https://github.com/rust-lang/mdBook
 
 ## Overview
 
-A `mdbook` preprocessor that simply replaces text in chapters.
+[mdBook] preprocessor that simply replaces text in chapters.
 
 Phrases to be replaced with specified content are defined in plain-text configuration file.
 
