@@ -1,6 +1,6 @@
 [package]
 name = "mdbook-yapp"
-version = "1.1.1"
+version = "1.1.2"
 authors = ["Dariusz Depta <depta@engos.de>"]
 description = "A mdBook preprocessor for simple text replacements"
 documentation = "https://docs.rs/mdbook-yapp"
@@ -12,6 +12,6 @@ edition = "2021"
 
 [dependencies]
 clap = "4.5.27"
-mdbook = "0.4.43"
+mdbook = "0.4.44"
 semver = "1.0.25"
-serde_json = "1.0.137"
+serde_json = "1.0.138"

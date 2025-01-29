@@ -17,7 +17,7 @@ tasks:
   clippy:
     desc: Runs clippy for all targets
     cmds:
-      - cmd: cargo +nightly clippy --all-targets
+      - cmd: cargo +stable clippy --all-targets
 
   doc:
     desc: Generates documentation
