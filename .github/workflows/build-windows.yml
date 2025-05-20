@@ -1,0 +1,22 @@
+# Windows x86_64
+
+name: Windows
+
+on:
+  push:
+    branches:
+      - main
+      - releases/**
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: x86_64-pc-windows-msvc
+      - run: cargo +stable build --release --target=x86_64-pc-windows-msvc

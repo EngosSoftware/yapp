@@ -54,39 +54,9 @@ pub fn load_config_from_file() -> Option<Replacements> {
 /// Loads configuration from provided text.
 pub fn load_config(content: &str) -> Option<Replacements> {
   let mut replacements = vec![];
-  let lines: Vec<String> = content.lines().map(|s| s.trim().to_string()).filter(|s| !s.is_empty()).collect();
-  for chunk in lines.chunks(2) {
-    replacements.push(Replacement::new(trim_quotation_marks(&chunk[0]), trim_quotation_marks(&chunk[1])));
+  let kvp = kivi::load_from_string_markers(content, &['\'', '"']);
+  for (key, value) in kvp.ordered_key_value_pairs() {
+    replacements.push(Replacement::new(key.into(), value.into()));
   }
   Some(Replacements::new(replacements))
-}
-
-fn trim_quotation_marks(input: &str) -> String {
-  if (input.starts_with('"') && input.ends_with('"')) || (input.starts_with('\'') && input.ends_with('\'')) {
-    input[1..input.len() - 1].to_string()
-  } else {
-    input.to_string()
-  }
-}
-
-#[cfg(test)]
-mod tests {
-  use super::*;
-  #[test]
-  fn trimming_single_quotation_should_work() {
-    assert_eq!(r#"alfa"#, trim_quotation_marks(r#"'alfa'"#));
-    assert_eq!(r#"'alfa'"#, trim_quotation_marks(r#"''alfa''"#));
-    assert_eq!(r#"'alfa"#, trim_quotation_marks(r#"'alfa"#));
-    assert_eq!(r#"alfa'"#, trim_quotation_marks(r#"alfa'"#));
-    assert_eq!(r#"'alfa""#, trim_quotation_marks(r#"'alfa""#));
-  }
-
-  #[test]
-  fn trimming_double_quotation_should_work() {
-    assert_eq!(r#"alfa"#, trim_quotation_marks(r#""alfa""#));
-    assert_eq!(r#""alfa""#, trim_quotation_marks(r#"""alfa"""#));
-    assert_eq!(r#""alfa"#, trim_quotation_marks(r#""alfa"#));
-    assert_eq!(r#"alfa""#, trim_quotation_marks(r#"alfa""#));
-    assert_eq!(r#"'alfa""#, trim_quotation_marks(r#"'alfa""#));
-  }
 }

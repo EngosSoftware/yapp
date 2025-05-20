@@ -1,0 +1,22 @@
+# Apple macOS ARM64
+
+name: macOS ARM64
+
+on:
+  push:
+    branches:
+      - main
+      - releases/**
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: aarch64-apple-darwin
+      - run: cargo +stable build --release --target=aarch64-apple-darwin

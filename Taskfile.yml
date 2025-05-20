@@ -19,6 +19,13 @@ tasks:
     cmds:
       - cmd: cargo +stable clippy --all-targets
 
+  cov:
+    desc: Generates code coverage report
+    cmds:
+      - cmd: cargo llvm-cov --no-cfg-coverage
+      - cmd: cargo llvm-cov report --html
+      - cmd: echo -e "\n\e[1;32mOpen coverage report\x3A\e[0m file:///$(pwd)/target/llvm-cov/html/index.html\n"
+
   doc:
     desc: Generates documentation
     cmds:
@@ -58,6 +65,11 @@ tasks:
     desc: Tests in debug mode
     cmds:
       - cmd: cargo +stable test
+
+  testn:
+    desc: Tests in debug mode using nextest
+    cmds:
+      - cmd: cargo +stable nextest run
 
   uninstall:
     desc: Uninstalls preprocessor

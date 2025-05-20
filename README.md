@@ -4,6 +4,7 @@
 [![MIT licensed][mit-badge]][mit-license-url]
 [![Apache 2.0 licensed][apache-badge]][apache-license-url]
 [![Contributor Covenant][cc-badge]][cc-url]
+[![Made by Human][mbh-badge]][cc-url]
 
 [crates-badge]: https://img.shields.io/crates/v/mdbook-yapp.svg
 [crates-url]: https://crates.io/crates/mdbook-yapp
@@ -16,6 +17,7 @@
 [apache-notice-url]: https://github.com/EngosSoftware/yapp/blob/main/NOTICE
 [cc-badge]: https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg
 [cc-url]: https://github.com/EngosSoftware/yapp/blob/main/CODE_OF_CONDUCT.md
+[mbh-badge]: https://img.shields.io/badge/Made_by-HUMAN-d35400.svg
 [repository-url]: https://github.com/EngosSoftware/yapp
 [mdBook]: https://github.com/rust-lang/mdBook
 
@@ -154,3 +156,7 @@ at your option.
 Any contributions to [**yapp**][repository-url] are greatly appreciated.
 All contributions intentionally submitted for inclusion in the work by you,
 shall be dual licensed as above, without any additional terms or conditions.
+
+---
+
+Brought to you with 💙 by [Engos Software](https://engos.de)
