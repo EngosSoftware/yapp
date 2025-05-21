@@ -1041,9 +1041,9 @@ dependencies = [
 
 [[package]]
 name = "kivi"
-version = "1.1.0"
+version = "1.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2d7a5d08ee60e0bb7555eb404aa0b7cc6323ad05a8b1b1bf69acb2a1d9465787"
+checksum = "edab984971b71b9bb43cbbcfaf0c75e83540d51cd8d2febd7bcf4eb1de960a18"
 dependencies = [
  "normalized-line-endings",
 ]
@@ -1257,9 +1257,9 @@ checksum = "650eef8c711430f1a879fdd01d4745a7deea475becfb90269c06775983bbf086"
 
 [[package]]
 name = "normalized-line-endings"
-version = "0.0.7"
+version = "0.0.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7f033fb9e8d02414fb276dafd328b396a223e86e5e8ad2dd24c947575c8d3688"
+checksum = "e4ee3ae54640bcac15da341ce0781d80ef51b4bae20edd65efa7be32436b4c17"
 
 [[package]]
 name = "normpath"

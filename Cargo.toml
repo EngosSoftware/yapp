@@ -18,7 +18,7 @@ exclude = [
 
 [dependencies]
 clap = "4.5.38"
-kivi = "1.1.0"
+kivi = "1.1.2"
 mdbook = "0.4.49"
 semver = "1.0.26"
 serde_json = "1.0.140"
