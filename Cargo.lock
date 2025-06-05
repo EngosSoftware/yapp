@@ -1030,9 +1030,9 @@ dependencies = [
 
 [[package]]
 name = "kivi"
-version = "1.1.2"
+version = "1.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "edab984971b71b9bb43cbbcfaf0c75e83540d51cd8d2febd7bcf4eb1de960a18"
+checksum = "c61a1c0c38b87566db92449679b2f8ebe9d44528a63b36224c2589aaa40e5f0c"
 dependencies = [
  "normalized-line-endings",
 ]
@@ -1175,7 +1175,7 @@ dependencies = [
 
 [[package]]
 name = "mdbook-yapp"
-version = "1.2.2"
+version = "1.2.3"
 dependencies = [
  "clap",
  "kivi",
@@ -1235,9 +1235,9 @@ checksum = "650eef8c711430f1a879fdd01d4745a7deea475becfb90269c06775983bbf086"
 
 [[package]]
 name = "normalized-line-endings"
-version = "0.0.8"
+version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e4ee3ae54640bcac15da341ce0781d80ef51b4bae20edd65efa7be32436b4c17"
+checksum = "4902f6d3c72504a4e23abd019898fcf7e96d831651edf1d161c0ce67ba5b83d1"
 
 [[package]]
 name = "normpath"
