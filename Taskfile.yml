@@ -29,22 +29,22 @@ tasks:
   doc:
     desc: Generates documentation
     cmds:
-      - cmd: cargo doc --no-deps
+      - cmd: cargo +stable doc --no-deps
 
   doc-open:
     desc: Generates documentation and opens in browser
     cmds:
-      - cmd: cargo doc --no-deps --open
+      - cmd: cargo +stable doc --no-deps --open
 
   doc-priv:
     desc: Generates documentation
     cmds:
-      - cmd: cargo doc --no-deps --document-private-items
+      - cmd: cargo +stable doc --no-deps --document-private-items
 
   doc-priv-open:
     desc: Generates documentation and opens in browser
     cmds:
-      - cmd: cargo doc --no-deps --document-private-items --open
+      - cmd: cargo +stable doc --no-deps --document-private-items --open
 
   fmt:
     desc: Runs code formatter
