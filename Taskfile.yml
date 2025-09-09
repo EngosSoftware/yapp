@@ -20,11 +20,22 @@ tasks:
       - cmd: cargo +stable clippy --all-targets
 
   cov:
-    desc: Generates code coverage report
+    desc: Generates code coverage report in text format
     cmds:
-      - cmd: cargo llvm-cov --no-cfg-coverage
-      - cmd: cargo llvm-cov report --html
-      - cmd: echo -e "\n\e[1;32mOpen coverage report\x3A\e[0m file:///$(pwd)/target/llvm-cov/html/index.html\n"
+      - cmd: cargo +stable llvm-cov clean
+      - cmd: cargo +stable llvm-cov --no-cfg-coverage
+
+  cov-html:
+    desc: Generates code coverage report in HTML format
+    cmds:
+      - cmd: cargo +stable llvm-cov clean
+      - cmd: cargo +stable llvm-cov --no-cfg-coverage --html --open
+
+  cov-badge:
+    desc: Generates the detailed code coverage badge
+    cmds:
+      - cmd: cargo +stable llvm-cov clean
+      - cmd: cargo +stable llvm-cov --no-cfg-coverage --json --summary-only | coverio --collapse --tag cov-badge-mdbook-yapp
 
   doc:
     desc: Generates documentation

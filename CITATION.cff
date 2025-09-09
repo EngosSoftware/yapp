@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: If you use this software, please cite it using these metadata.
+title: mdBook preprocessor for simple text replacements
+authors:
+  - family-names: Depta
+    given-names: Dariusz
+    orcid: https://orcid.org/0009-0009-0117-6589
+version: 1.2.4
+date-released: 2023-11-09
+license: Apache-2.0, MIT
+url: https://github.com/EngosSoftware/yapp.git

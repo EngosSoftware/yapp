@@ -7,6 +7,7 @@ on:
     branches:
       - main
       - release/**
+  pull_request:
 
 env:
   CARGO_TERM_COLOR: always
@@ -19,4 +20,4 @@ jobs:
       - uses: dtolnay/rust-toolchain@stable
         with:
           targets: x86_64-pc-windows-msvc
-      - run: cargo +stable build --release --target=x86_64-pc-windows-msvc
+      - run: cargo build --release --target=x86_64-pc-windows-msvc
