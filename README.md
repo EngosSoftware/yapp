@@ -1,14 +1,15 @@
 # Yet another preprocessor for mdBook
 
 [![Crates.io][crates-badge]][crates-url]
-![Code coverage][coverage-badge]
+[![Code coverage][cov-badge-mdbook-yapp]][cov-url]
 ![build Linux][build-badge-linux]
 ![build Windows][build-badge-windows]
-![build MacOs][build-badge-macos]
+![build macOs][build-badge-macos]
+![build macOs arm64][build-badge-macos-arm64]
 [![MIT licensed][mit-badge]][mit-license-url]
 [![Apache 2.0 licensed][apache-badge]][apache-license-url]
 [![Contributor Covenant][cc-badge]][cc-url]
-[![Made by Human][mbh-badge]][cc-url]
+[![Made by Human][made-by-human-badge]][made-by-human-url]
 
 [crates-badge]: https://img.shields.io/crates/v/mdbook-yapp.svg
 [crates-url]: https://crates.io/crates/mdbook-yapp
@@ -22,16 +23,21 @@
 [build-badge-linux]: https://github.com/EngosSoftware/kivi/actions/workflows/build-linux.yml/badge.svg
 [build-badge-windows]: https://github.com/EngosSoftware/kivi/actions/workflows/build-windows.yml/badge.svg
 [build-badge-macos]: https://github.com/EngosSoftware/kivi/actions/workflows/build-macos.yml/badge.svg
-[coverage-badge]: https://img.shields.io/badge/Code%20coverage-20%25-green.svg
-[cc-badge]: https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg
+[build-badge-macos-arm64]: https://github.com/EngosSoftware/kivi/actions/workflows/build-macos-arm64.yml/badge.svg
+[cov-url]: https://crates.io/crates/coverio
+[cov-badge-mdbook-yapp]: https://img.shields.io/badge/cov-23%25%20%E2%94%82%2033%25%20%E2%94%82%2021%25-f52020.svg
+[cc-badge]: https://img.shields.io/badge/Contributor%20Covenant-2.1-blue.svg
 [cc-url]: https://github.com/EngosSoftware/yapp/blob/main/CODE_OF_CONDUCT.md
-[mbh-badge]: https://img.shields.io/badge/Made_by-HUMAN-d35400.svg
+[made-by-human-badge]: https://img.shields.io/badge/Made_by-HUMAN-red.svg
+[made-by-human-url]: https://github.com/DariuszDepta
 [repository-url]: https://github.com/EngosSoftware/yapp
 [mdBook]: https://github.com/rust-lang/mdBook
 
+**mdBook preprocessor for simple text replacements**
+
 ## Overview
 
-[mdBook] preprocessor that simply replaces text in chapters.
+[mdBook] preprocessor that simply replaces text in all chapters.
 
 Phrases to be replaced with specified content are defined in plain-text configuration file.
 
